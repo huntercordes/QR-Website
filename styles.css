@@ -1,0 +1,108 @@
+/* Reset styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensures the video is behind all content */
+}
+
+/* Full-page background */
+.body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Title styling */
+.title h1 {
+    margin: 0;
+
+    padding: 20px;
+    color: rgba(250, 250, 250, 0.6);
+    font-size: 2.4rem;
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+}
+.wave-effect {
+    background: linear-gradient(90deg, rgba(31, 203, 247, 0.7) 25%, rgba(0, 0, 0, 0.1) 50%, rgba(6, 147, 212, 0.7) 75%);
+    background-size: 200% 100%;
+    animation: wave 6s infinite linear;
+    /* Standard background-clip */
+    background-clip: text;
+    
+    /* Webkit-prefixed background-clip */
+    -webkit-background-clip: text;
+    
+    color: transparent;
+}
+
+/* Wave animation definition */
+@keyframes wave {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* QR-link container styling */
+.qr-link {
+    background: linear-gradient(90deg, rgba(221, 228, 230, 0.3) 25%, rgba(0, 0, 0, 0.1) 50%, rgba(69, 194, 252, 0.3) 75%);
+    background-size: 200% 100%;
+    animation: wave 5s infinite linear;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Wave button image styling */
+.wave-button {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgba(31, 203, 247, 0.7) 25%, rgba(0, 0, 0, 0.1) 50%, rgba(6, 147, 212, 0.7) 75%);
+    background-size: 200% 100%;
+    animation: wave 4s infinite linear;
+    /* Standard background-clip */
+    background-clip: text;
+    
+    /* Webkit-prefixed background-clip */
+    -webkit-background-clip: text;
+    
+    color: transparent;
+}
+.click-text {
+    position: absolute;
+    bottom: 20px; /* Adjust positioning as needed */
+    left: 50%;
+    font-family: "Cormorant", serif;
+    transform: translateX(-50%);
+    font-size: 2.2rem;
+    color: white;
+    font-weight: bold;
+    z-index: 2; /* Keeps the text above the image */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); /* Adds shadow to text for better visibility */
+}

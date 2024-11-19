@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean QR</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Fjalla+One&display=swap" rel="stylesheet">
+<script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+<script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+        "mindar-image-three":"https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-three.prod.js"
+      }
+    }
+    </script>
+    
+</head>
+<body class="body">
+    <video autoplay loop muted playsinline class="background-video">
+        <source src="videos/Waves Come Alive Zoom.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <main>
+        <div class="title"> 
+            <h1 class="wave-effect">
+                The Art Can Come Alive!
+            </h1>
+        </div>
+        <div class="qr-link">
+            <a href="another-page.html">
+                <div class="click-text">Click Here</div>
+            </a>
+        </div>
+
+
+    </main>
+</body>
