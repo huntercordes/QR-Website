@@ -73,18 +73,31 @@ body, html {
 }
 
 /* QR Box Styling */
-.qr-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-    color: #333;
-    text-decoration: none;
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
+.pick-me {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    display: none; /* Hidden by default */
+}
+
+/* Shake animation */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+.qr-box.shake {
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+.qr-box.shake .pick-me {
+    display: block; /* Show "Pick Me!" when shaking */
 }
 .qr-box-6 {
     display: flex;
